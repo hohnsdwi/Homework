@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Math 480 Homework 7: An Experiment in LaTex and Logic}
+\author{Dwight Hohnstein}
+
+\begin{document}
+\maketitle Demonstrating the Basics of Logic While Learning LaTex Typesetting 
+
+\begin{abstract}
+A brief introduction to propositional calculus.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+The project that myself, Jessica Junk and Tanner Missler are working on is the betterment and completion of logic.py modules in the Sage library. In this paper I will go over some basic propositional logic.
+
+\section{STOP, READ NO FURTHER IF...}
+\label{sec:stop}
+
+Not mentioned in \ref{sec:intro}, this paper will not have the following:
+\begin{enumerate}
+    \item Formulas of the form $a^2+b^2=c^2$
+
+    \item Rigorous Mathematical Proofs
+
+    \item Theory that underlies any type of nontrivial mathematical concepts.
+\end{enumerate}
+
+
+\section{Meat and Potatoes: An Introduction to Propositional  Calculus}
+\label{mp}
+Let P, Q, R represent any proposition. Let $\to$ represent implies. Let $\lnot$ represent not. Consider the following statement: $$P \to \lnot P$$ Interpreted in english, the statement reads "P implies not P." In a more concrete example, let P represent the proposition of having oranges. What the above says that if you have oranges, you can't have not oranges. It's converse is also true, 
+
+$$
+\lnot P \to P
+$$
+
+
+\subsection{Truth Tables}
+
+Consider the following statment: 
+$$
+(P \lor Q) \to R
+$$ 
+For P, Q, R propositions, and $\lor$ representing the phrase 'or'. A truth table is a table that shows the truth or falsity of a given proposition. As stated above, you can either have P or $\lnot$ P. Having P corresponds to true, and $\lnot$ P false similairily. The truth table goes through all possible truth assignments for P and Q to determine the truth or falsity of R. Table 1 shows just that, toggling all possibilities of Q when P is held true, then all assigments of Q when P is held false. $(P \lor Q)$ only becomes false when both P and Q are both false, and thus we do not have the statement R.  
+
+\begin{table}
+\centering
+\begin{tabular}{c|c|c|c}
+P & Q & $(P \lor Q)$ & R \\\hline
+T & T & T & T \\\hline
+T & F & T & T \\\hline
+F & T & T & T \\\hline
+F & F & F & F 
+\end{tabular}
+\caption{The corresponding truth table for $(P \lor Q) \to R$}
+\end{table}
+
+
+\end{document}
